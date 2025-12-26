@@ -53,7 +53,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background via-red-950/20 to-green-950/20 relative overflow-hidden">
+    <div className="min-h-screen bg-white relative overflow-hidden">
       <div id="snow-container" className="fixed inset-0 pointer-events-none z-50"></div>
       
       <audio ref={audioRef} loop>
@@ -88,13 +88,6 @@ const Index = () => {
               <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-3d bg-gradient-to-r from-white via-red-200 to-white bg-clip-text text-transparent">
                 ЕВГЕНИЯ ВЕЛИКАЯ
               </h2>
-            </div>
-            
-            <div className="flex justify-center gap-4 mt-8">
-              <div className="animate-sparkle text-4xl">🎄</div>
-              <div className="animate-sparkle text-4xl" style={{ animationDelay: '0.3s' }}>✨</div>
-              <div className="animate-sparkle text-4xl" style={{ animationDelay: '0.6s' }}>🎁</div>
-              <div className="animate-sparkle text-4xl" style={{ animationDelay: '0.9s' }}>🎉</div>
             </div>
           </div>
         </section>
