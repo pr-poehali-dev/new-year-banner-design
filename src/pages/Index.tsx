@@ -49,13 +49,15 @@ const Index = () => {
 
       <div className="relative">
         <section className="min-h-screen flex items-center justify-center relative px-4">
-          <div 
-            className="absolute inset-0 w-full h-full bg-cover bg-center opacity-60"
-            style={{
-              backgroundImage: 'url(https://cdn.poehali.dev/files/fireworks-exploding-heart.png)',
-              animation: 'pulse 2s ease-in-out infinite'
-            }}
-          />
+          <div className="absolute inset-0 w-full h-full flex items-center justify-center overflow-hidden">
+            <div className="firework-container">
+              <img 
+                src="https://cdn.poehali.dev/files/fireworks-exploding-heart.png" 
+                alt="Fireworks"
+                className="firework-image"
+              />
+            </div>
+          </div>
           
           <div className="relative z-10 text-center space-y-8">
             <div className="animate-float">
@@ -163,6 +165,38 @@ const Index = () => {
           animation: snow-fall linear infinite;
           font-size: ${Math.random() * 20 + 10}px;
           opacity: ${Math.random() * 0.5 + 0.5};
+        }
+        
+        @keyframes firework-explode {
+          0% {
+            transform: scale(0.3);
+            opacity: 0;
+          }
+          50% {
+            transform: scale(1);
+            opacity: 0.8;
+          }
+          100% {
+            transform: scale(1.2);
+            opacity: 0;
+          }
+        }
+        
+        .firework-container {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        
+        .firework-image {
+          width: 80%;
+          max-width: 600px;
+          height: auto;
+          animation: firework-explode 3s ease-out infinite;
+          filter: brightness(1.2);
         }
       `}</style>
     </div>
