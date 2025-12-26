@@ -4,8 +4,6 @@ import { Card } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
 
 const Index = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
     const snowContainer = document.getElementById('snow-container');
@@ -22,16 +20,7 @@ const Index = () => {
     }
   }, []);
 
-  const toggleMusic = () => {
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.pause();
-      } else {
-        audioRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
+
 
   const poems = [
     {
@@ -56,24 +45,15 @@ const Index = () => {
     <div className="min-h-screen bg-white relative overflow-hidden">
       <div id="snow-container" className="fixed inset-0 pointer-events-none z-50"></div>
       
-      <audio ref={audioRef} loop>
-        <source src="https://www.orangefreesounds.com/wp-content/uploads/2022/05/We-wish-you-a-Merry-Christmas-song.mp3" type="audio/mpeg" />
-      </audio>
 
-      <Button
-        onClick={toggleMusic}
-        className="fixed top-4 right-4 z-50 bg-primary hover:bg-primary/90"
-        size="icon"
-      >
-        <Icon name={isPlaying ? "Volume2" : "VolumeX"} size={24} />
-      </Button>
 
       <div className="relative">
         <section className="min-h-screen flex items-center justify-center relative px-4">
           <div 
-            className="absolute inset-0 w-full h-full bg-cover bg-center opacity-50"
+            className="absolute inset-0 w-full h-full bg-cover bg-center opacity-60"
             style={{
-              backgroundImage: 'url(https://media.giphy.com/media/xT0xeuOy2Fcl9vDGiA/giphy.gif)'
+              backgroundImage: 'url(https://cdn.poehali.dev/files/fireworks-exploding-heart.png)',
+              animation: 'pulse 2s ease-in-out infinite'
             }}
           />
           
