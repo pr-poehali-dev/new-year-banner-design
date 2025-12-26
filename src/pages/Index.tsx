@@ -61,10 +61,10 @@ const Index = () => {
           
           <div className="relative z-10 text-center space-y-8">
             <div className="animate-float">
-              <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-3d bg-gradient-to-r from-red-500 via-white to-red-500 bg-clip-text text-transparent mb-4">
+              <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-3d gradient-text mb-4">
                 С НОВЫМ ГОДОМ
               </h1>
-              <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-3d bg-gradient-to-r from-white via-red-200 to-white bg-clip-text text-transparent">
+              <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-3d gradient-text">
                 ЕВГЕНИЯ ВЕЛИКАЯ
               </h2>
             </div>
@@ -212,6 +212,27 @@ const Index = () => {
           width: 100%;
           height: 100%;
           object-fit: cover;
+        }
+        
+        @keyframes gradient-shift {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+        
+        .gradient-text {
+          background: linear-gradient(90deg, #ffffff, #8b0000, #ffffff, #8b0000);
+          background-size: 300% 100%;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          animation: gradient-shift 4s ease infinite;
         }
       `}</style>
     </div>
