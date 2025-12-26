@@ -57,7 +57,7 @@ const Index = () => {
       <div id="snow-container" className="fixed inset-0 pointer-events-none z-50"></div>
       
       <audio ref={audioRef} loop>
-        <source src="https://cdn.pixabay.com/download/audio/2021/11/23/audio_4f4e6e6ab7.mp3" type="audio/mpeg" />
+        <source src="https://cdn.pixabay.com/download/audio/2022/11/21/audio_4e5438de00.mp3" type="audio/mpeg" />
       </audio>
 
       <Button
