@@ -212,7 +212,6 @@ const Index = () => {
           width: 70%;
           max-width: 700px;
           height: auto;
-          animation: firework-explode 4s ease-in-out infinite, glow-pulse 2s ease-in-out infinite;
         }
       `}</style>
     </div>
