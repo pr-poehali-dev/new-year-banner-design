@@ -56,8 +56,8 @@ const Index = () => {
     <div className="min-h-screen bg-white relative overflow-hidden">
       <div id="snow-container" className="fixed inset-0 pointer-events-none z-50"></div>
       
-      <audio ref={audioRef} loop volume={0.5}>
-        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
+      <audio ref={audioRef} loop>
+        <source src="https://www.orangefreesounds.com/wp-content/uploads/2022/05/We-wish-you-a-Merry-Christmas-song.mp3" type="audio/mpeg" />
       </audio>
 
       <Button
@@ -70,15 +70,12 @@ const Index = () => {
 
       <div className="relative">
         <section className="min-h-screen flex items-center justify-center relative px-4">
-          <div className="absolute inset-0 w-full h-full">
-            <iframe
-              src="https://giphy.com/embed/l0HlR3kHtkgFbYfgQ"
-              className="w-full h-full"
-              style={{ pointerEvents: 'none' }}
-              frameBorder="0"
-              allowFullScreen
-            />
-          </div>
+          <div 
+            className="absolute inset-0 w-full h-full bg-cover bg-center opacity-50"
+            style={{
+              backgroundImage: 'url(https://media.giphy.com/media/xT0xeuOy2Fcl9vDGiA/giphy.gif)'
+            }}
+          />
           
           <div className="relative z-10 text-center space-y-8">
             <div className="animate-float">
