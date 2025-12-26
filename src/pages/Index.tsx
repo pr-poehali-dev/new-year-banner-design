@@ -70,15 +70,15 @@ const Index = () => {
 
       <div className="relative">
         <section className="min-h-screen flex items-center justify-center relative px-4">
-          <div 
-            className="absolute inset-0 opacity-30"
-            style={{
-              backgroundImage: 'url(https://media.giphy.com/media/26tPcHAeyXGkD7X0c/giphy.gif)',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              filter: 'brightness(0.7)'
-            }}
-          />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover opacity-40"
+          >
+            <source src="https://cdn.pixabay.com/video/2022/12/31/145229-784895994_large.mp4" type="video/mp4" />
+          </video>
           
           <div className="relative z-10 text-center space-y-8">
             <div className="animate-float">
@@ -156,7 +156,7 @@ const Index = () => {
                 </div>
                 
                 <p className="text-xl font-bold text-primary mt-8">
-                  С Новым 2025 Годом, Евгения! 🎉
+                  С Новым 2026 Годом, Евгения! 🎉
                 </p>
               </div>
             </Card>
