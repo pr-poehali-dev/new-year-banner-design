@@ -49,10 +49,10 @@ const Index = () => {
 
       <div className="relative">
         <section className="min-h-screen flex items-center justify-center relative px-4">
-          <div className="absolute inset-0 w-full h-full flex items-center justify-center overflow-hidden">
+          <div className="absolute inset-0 w-full h-full flex items-center justify-center overflow-hidden bg-black/80">
             <div className="firework-container">
               <img 
-                src="https://cdn.poehali.dev/files/fireworks-exploding-heart.png" 
+                src="https://cdn.poehali.dev/files/scale_1200.jpg" 
                 alt="Fireworks"
                 className="firework-image"
               />
@@ -169,16 +169,33 @@ const Index = () => {
         
         @keyframes firework-explode {
           0% {
-            transform: scale(0.3);
+            transform: scale(0.5);
             opacity: 0;
+            filter: brightness(0.5) blur(10px);
           }
-          50% {
+          30% {
             transform: scale(1);
-            opacity: 0.8;
+            opacity: 1;
+            filter: brightness(1.5) blur(0px);
+          }
+          60% {
+            transform: scale(1.05);
+            opacity: 0.9;
+            filter: brightness(1.8) blur(1px);
           }
           100% {
-            transform: scale(1.2);
-            opacity: 0;
+            transform: scale(1.1);
+            opacity: 0.3;
+            filter: brightness(0.8) blur(5px);
+          }
+        }
+        
+        @keyframes glow-pulse {
+          0%, 100% {
+            box-shadow: 0 0 20px rgba(220, 38, 38, 0.5), 0 0 40px rgba(220, 38, 38, 0.3);
+          }
+          50% {
+            box-shadow: 0 0 40px rgba(220, 38, 38, 0.8), 0 0 80px rgba(220, 38, 38, 0.5);
           }
         }
         
@@ -192,11 +209,10 @@ const Index = () => {
         }
         
         .firework-image {
-          width: 80%;
-          max-width: 600px;
+          width: 70%;
+          max-width: 700px;
           height: auto;
-          animation: firework-explode 3s ease-out infinite;
-          filter: brightness(1.2);
+          animation: firework-explode 4s ease-in-out infinite, glow-pulse 2s ease-in-out infinite;
         }
       `}</style>
     </div>
